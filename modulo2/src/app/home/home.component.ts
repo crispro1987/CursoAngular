@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 import { CalculadoraService } from '../shared/calculadora.service';
 
 @Component({
@@ -7,6 +8,12 @@ import { CalculadoraService } from '../shared/calculadora.service';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+
+  observable = new Observable(subscriber => {
+    subscriber.next('Hola 1');
+    subscriber.next('Hola 2');
+    subscriber.next('Hola 3');
+  })
 
   constructor( public calculadora: CalculadoraService ) { }
 
