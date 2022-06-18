@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ContadorService } from '../shared/contador.service';
+import { IUser } from '../shared/iuser';
 
 @Component({
   selector: 'app-componente2',
@@ -8,6 +9,12 @@ import { ContadorService } from '../shared/contador.service';
   providers: [ ContadorService ]
 })
 export class Componente2Component implements OnInit {
+
+  usuario: IUser = {
+    nombre: 'Cristian',
+    apellido: 'Vargas',
+    telefono: '973719947'
+  };
 
   constructor( public contadorService: ContadorService ) { }
 
