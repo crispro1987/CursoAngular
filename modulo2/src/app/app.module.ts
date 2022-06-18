@@ -8,6 +8,7 @@ import { Pagina2Component } from './pagina2/pagina2.component';
 import { Pagina1Component } from './pagina1/pagina1.component';
 import { Componente1Component } from './componente1/componente1.component';
 import { Componente2Component } from './componente2/componente2.component';
+import { ContadorService } from './shared/contador.service';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,9 @@ import { Componente2Component } from './componente2/componente2.component';
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    ContadorService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
