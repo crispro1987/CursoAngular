@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ContadorService } from '../shared/contador.service';
 
 @Component({
   selector: 'app-componente2',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Componente2Component implements OnInit {
 
-  constructor() { }
+  constructor( public contadorService: ContadorService ) { }
 
   ngOnInit(): void {
   }
 
+  incrementar(){
+    this.contadorService.incrementar();
+  }
 }
