@@ -6,9 +6,9 @@ import { Pagina2Component } from './pagina2/pagina2.component';
 
 const routes: Routes = [
   { path: "", redirectTo: "/home", pathMatch: "full" },
-  { path: "/home", component: HomeComponent },
-  { path: "/pagina1", component: Pagina1Component },
-  { path: "/pagina2", component: Pagina2Component }
+  { path: "home", component: HomeComponent },
+  { path: "pagina1", component: Pagina1Component },
+  { path: "pagina2", component: Pagina2Component }
 ];
 
 @NgModule({
