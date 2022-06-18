@@ -7,7 +7,7 @@ import { ICalculadora } from './icalculadora';
 })
 export class CalculadoraService implements ICalculadora {
 
-  constructor() { }
+  public total: number = 0; //modo de ejemplo interfaz
 
   sumar(num1: number, num2: number): number {
     let total: number = 0;
