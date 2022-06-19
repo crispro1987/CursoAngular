@@ -18,11 +18,18 @@ export class HomeComponent implements OnInit {
   constructor( public calculadora: CalculadoraService ) { }
 
   ngOnInit(): void {
-    console.log(this.sumar(1,3))
+    console.log(this.sumar(1,3));
+    this.probarObservable();
   }
 
   sumar(num1: number, num2: number){
     return this.calculadora.sumar(num1,num2);
+  }
+
+  probarObservable(){
+    this.observable.subscribe((resp) => {
+      console.log(resp)
+    });
   }
 
 }
